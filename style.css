@@ -23,11 +23,13 @@ figure img {
 }
 
 /* Featured landmark image */
+/* Featured landmark image */
 .featured img {
     display: block;
     width: 100%;
-    max-width: 1000px;
+    max-width: 600px;
     height: auto;
+    margin: 0 auto;
 }
 
 /* Responsive YouTube video */
