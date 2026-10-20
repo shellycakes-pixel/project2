@@ -10,6 +10,7 @@ video {
 body {
     background-color: #BFE6FF;
     font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 18px;
 }
 
 /* Landmarks image grid */
@@ -33,7 +34,7 @@ figure img {
 .featured picture {
     display: block;
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -41,6 +42,19 @@ figure img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+/* Bigger headings */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+.site-title {
+    font-size: 2rem;
 }
 
 /* Responsive YouTube video */
