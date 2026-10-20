@@ -1,8 +1,15 @@
+
 /* Basic responsive image and video CSS */
 img,
 video {
     max-width: 100%;
     height: auto;
+}
+
+/* Baby blue background and font */
+body {
+    background-color: #BFE6FF;
+    font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 /* Landmarks image grid */
@@ -23,13 +30,17 @@ figure img {
 }
 
 /* Featured landmark image */
-/* Featured landmark image */
-.featured img {
+.featured picture {
     display: block;
     width: 100%;
-    max-width: 400px;
-    height: auto;
+    max-width: 550px;
     margin: 0 auto;
+}
+
+.featured picture img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Responsive YouTube video */
@@ -48,11 +59,4 @@ figure img {
     width: 100%;
     height: 100%;
     border: 0;
-    
 }
-
-/* Baby blue website background */
-body {
-    background-color: #BFE6FF;
-}
-
