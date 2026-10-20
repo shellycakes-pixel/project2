@@ -44,17 +44,22 @@ figure img {
     height: auto;
 }
 
-/* Bigger headings */
+/* Main title */
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
+/* Section headings */
 h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }
 
-.site-title {
-    font-size: 2rem;
+/* Introduction, featured description, site title, and footer */
+.featured > p,
+.intro,
+.site-title,
+footer p {
+    font-size: 22px;
 }
 
 /* Responsive YouTube video */
