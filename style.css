@@ -27,7 +27,7 @@ figure img {
 .featured img {
     display: block;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     height: auto;
     margin: 0 auto;
 }
