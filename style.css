@@ -1,81 +1,212 @@
 
-/* Basic responsive image and video CSS */
-img,
-video {
-    max-width: 100%;
-    height: auto;
+/* ==============================
+   NYC LANDMARKS WEBSITE STYLES
+   ============================== */
+
+/* Header */
+header {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-4);
 }
 
-/* Baby blue background and font */
-body {
-    background-color: #BFE6FF;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 18px;
+.site-title {
+  color: var(--primary-text);
+  letter-spacing: 0.04em;
 }
 
-/* Landmarks image grid */
-.landmarks-grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+/* Main Content */
+main {
+  padding-top: var(--space-4);
 }
 
-figure {
-    margin: 0;
+/* General Sections */
+section {
+  border-radius: 14px;
 }
 
-figure img {
-    display: block;
-    width: 100%;
-    height: auto;
+/* Introduction */
+.introduction {
+  text-align: center;
+  padding: var(--space-8);
 }
 
-/* Featured landmark image */
-.featured picture {
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+.introduction h1 {
+  max-width: 750px;
+  margin-inline: auto;
 }
 
-.featured picture img {
-    display: block;
-    width: 100%;
-    height: auto;
+.introduction .intro {
+  font-size: var(--text-size-lg);
+  font-weight: bold;
+  max-width: 650px;
+  margin-inline: auto;
 }
 
-/* Main title */
-h1 {
-    font-size: 3rem;
+.introduction p:last-child {
+  max-width: 700px;
+  margin-inline: auto;
 }
 
-/* Section headings */
-h2 {
-    font-size: 2.2rem;
+/* Video Section */
+.intro-video {
+  background-color: var(--alternate-background);
+  color: var(--alternate-text);
+  padding: var(--space-8);
 }
 
-/* Introduction, featured description, site title, and footer */
-.featured > p,
-.intro,
-.site-title,
-footer p {
-    font-size: 22px;
+.intro-video h2 {
+  text-align: center;
 }
 
-/* Responsive YouTube video */
+/* Responsive YouTube Video */
 .videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Featured Landmark */
+.featured-landmark {
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.featured-landmark picture {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto var(--space-6);
+}
+
+.featured-landmark picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(24, 38, 56, 0.18);
+}
+
+.featured-landmark p {
+  max-width: 750px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+/* Landmark Gallery */
+.landmarks {
+  background-color: var(--alternate-background);
+  color: var(--alternate-text);
+  padding: var(--space-8);
+}
+
+.landmarks > h2 {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.landmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--grid-gap);
+}
+
+/* Individual Landmark Cards */
+.landmark {
+  background-color: #FFFFFF;
+  padding: var(--space-3);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(24, 38, 56, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landmark:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(24, 38, 56, 0.18);
+}
+
+/* Landmark Images */
+figure {
+  margin: 0 0 var(--space-3);
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: var(--text-size-sm);
+  margin-top: var(--space-2);
+}
+
+.landmark h3 {
+  margin: var(--space-3) 0 var(--space-2);
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+footer p {
+  margin: 0;
+  font-size: var(--text-size-sm);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  header, main, footer {
+    padding: var(--space-4);
+  }
+
+  h1 {
+    font-size: var(--text-size-2xl);
+  }
+
+  h2 {
+    font-size: var(--text-size-xl);
+  }
+
+  .introduction,
+  .intro-video,
+  .featured-landmark,
+  .landmarks {
+    padding: var(--space-4);
+  }
+
+  .landmarks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .landmark {
+    transition: none;
+  }
+
+  .landmark:hover {
+    transform: none;
+  }
 }
