@@ -2,6 +2,8 @@
 
 ## Project Overview
 
+NYC Landmarks is an informational website that introduces visitors to six popular landmarks across New York City's five boroughs. The site helps people discover places to visit, learn about their history, and find useful visitor information while planning a trip. Visitors can explore landmark photos, short introductions, and individual pages with additional details and helpful links. The website uses a welcoming, image-focused design and responsive layouts so it can be explored on desktop computers, tablets, and mobile phones.
+
 ## Target Audience
 
 People who want information about some of New York City's major landmarks. They may be comparing places to visit while planning at home or looking up information on a phone while traveling around the city. The site should help them quickly understand what each landmark offers and find links to visitor information and directions.
@@ -15,6 +17,10 @@ People who want information about some of New York City's major landmarks. They 
 - Scan headings, text, and navigation easily while using the site on the go.
 
 ### Creator Goals
+
+- Improve my responsive web design skills by using CSS media queries and flexible layouts for different screen sizes.
+- Build a seven-page website with consistent navigation, reusable page layouts, and organized HTML and CSS.
+- Improve accessibility by using semantic HTML, descriptive image alt text, readable content, and keyboard-friendly navigation.
 
 ## Scope of Work
 
