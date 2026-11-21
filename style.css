@@ -3,7 +3,15 @@
    NYC LANDMARKS WEBSITE STYLES
    ============================== */
 
-/* Header */
+/* Base layout */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
 header {
   padding-top: var(--space-8);
   padding-bottom: var(--space-4);
@@ -12,16 +20,36 @@ header {
 .site-title {
   color: var(--primary-text);
   letter-spacing: 0.04em;
+  font-size: var(--text-size-lg);
+  font-weight: bold;
 }
 
-/* Main Content */
 main {
   padding-top: var(--space-4);
 }
 
-/* General Sections */
 section {
   border-radius: 14px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header navigation */
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0;
+}
+
+.site-nav a {
+  font-weight: bold;
 }
 
 /* Introduction */
@@ -47,7 +75,7 @@ section {
   margin-inline: auto;
 }
 
-/* Video Section */
+/* Video */
 .intro-video {
   background-color: var(--alternate-background);
   color: var(--alternate-text);
@@ -58,7 +86,6 @@ section {
   text-align: center;
 }
 
-/* Responsive YouTube Video */
 .videoWrapper {
   position: relative;
   width: 100%;
@@ -77,7 +104,7 @@ section {
   border: 0;
 }
 
-/* Featured Landmark */
+/* Featured landmark */
 .featured-landmark {
   text-align: center;
   padding: var(--space-8);
@@ -89,10 +116,9 @@ section {
   margin: 0 auto var(--space-6);
 }
 
-.featured-landmark picture img {
-  display: block;
+.featured-landmark picture img,
+.landmark-hero img {
   width: 100%;
-  height: auto;
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(24, 38, 56, 0.18);
 }
@@ -103,7 +129,11 @@ section {
   text-align: left;
 }
 
-/* Landmark Gallery */
+.image-credit {
+  font-size: var(--text-size-sm);
+}
+
+/* Landmark gallery */
 .landmarks {
   background-color: var(--alternate-background);
   color: var(--alternate-text);
@@ -117,11 +147,10 @@ section {
 
 .landmarks-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--grid-gap);
 }
 
-/* Individual Landmark Cards */
 .landmark {
   background-color: #FFFFFF;
   padding: var(--space-3);
@@ -135,13 +164,11 @@ section {
   box-shadow: 0 8px 18px rgba(24, 38, 56, 0.18);
 }
 
-/* Landmark Images */
 figure {
   margin: 0 0 var(--space-3);
 }
 
 figure img {
-  display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -158,6 +185,58 @@ figcaption {
   text-align: center;
 }
 
+/* Individual landmark page */
+.landmark-page section {
+  padding: var(--space-6);
+}
+
+.landmark-hero {
+  text-align: center;
+}
+
+.landmark-hero img {
+  max-width: 750px;
+  margin: 0 auto var(--space-3);
+}
+
+.landmark-hero p {
+  max-width: 750px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.landmark-details,
+.directions,
+.more-info {
+  background-color: var(--alternate-background);
+  color: var(--alternate-text);
+}
+
+.more-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.more-images img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.page-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+}
+
+.page-navigation a {
+  font-weight: bold;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -170,33 +249,38 @@ footer p {
   font-size: var(--text-size-sm);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-  header, main, footer {
-    padding: var(--space-4);
-  }
-
-  h1 {
-    font-size: var(--text-size-2xl);
-  }
-
-  h2 {
-    font-size: var(--text-size-xl);
-  }
-
-  .introduction,
-  .intro-video,
-  .featured-landmark,
-  .landmarks {
-    padding: var(--space-4);
-  }
-
+/* Tablet */
+@media (min-width: 600px) {
   .landmarks-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .more-images {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-navigation {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
-/* Respect reduced-motion preferences */
+/* Desktop */
+@media (min-width: 900px) {
+  .landmarks-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .more-images {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .landmark-page section {
+    padding: var(--space-8);
+  }
+}
+
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

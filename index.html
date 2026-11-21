@@ -13,13 +13,20 @@
 
     <header>
         <div class="site-title">NYC Landmarks</div>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#featured">Featured Landmark</a></li>
+                <li><a href="#landmarks">Explore Landmarks</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
 
         <!-- Introduction -->
         <section class="introduction">
-
             <h1>NYC Landmarks Virtual Tour</h1>
 
             <p class="intro">
@@ -29,12 +36,10 @@
             <p>
                 New York City is filled with landmarks, tourist attractions and historic sites dating from before it was known as New York City to more recent additions. Click through this site to explore!
             </p>
-
         </section>
 
         <!-- Introduction Video -->
         <section class="intro-video">
-
             <h2>Watch New York City</h2>
 
             <div class="videoWrapper">
@@ -46,12 +51,10 @@
                     allowfullscreen>
                 </iframe>
             </div>
-
         </section>
 
         <!-- Featured Landmark -->
-        <section class="featured-landmark">
-
+        <section class="featured-landmark" id="featured">
             <h2>Featured Landmark: Wonder Wheel</h2>
 
             <picture>
@@ -83,11 +86,15 @@
                 Coney Island has been a hub of seaside amusement for more than a century, known for its thrilling rides, bright lights, and summertime energy. From the historic Cyclone roller coaster to modern attractions, it remains one of New York City’s most beloved destinations for fun by the beach.
             </p>
 
+            <p>
+                <a class="button" href="landmark-wonder.html">
+                    Explore the Wonder Wheel
+                </a>
+            </p>
         </section>
 
         <!-- Landmark Cards -->
-        <section class="landmarks">
-
+        <section class="landmarks" id="landmarks">
             <h2>Explore the Landmarks</h2>
 
             <div class="landmarks-grid">
@@ -105,7 +112,6 @@
                             </a>
                         </figcaption>
                     </figure>
-
                     <h3>Statue of Liberty</h3>
                 </div>
 
@@ -122,7 +128,6 @@
                             </a>
                         </figcaption>
                     </figure>
-
                     <h3>Empire State Building</h3>
                 </div>
 
@@ -139,7 +144,6 @@
                             </a>
                         </figcaption>
                     </figure>
-
                     <h3>Staten Island Ferry</h3>
                 </div>
 
@@ -156,8 +160,9 @@
                             </a>
                         </figcaption>
                     </figure>
-
-                    <h3>Wonder Wheel</h3>
+                    <h3>
+                        <a href="landmark-wonder.html">Wonder Wheel</a>
+                    </h3>
                 </div>
 
                 <div class="landmark">
@@ -173,7 +178,6 @@
                             </a>
                         </figcaption>
                     </figure>
-
                     <h3>Yankee Stadium</h3>
                 </div>
 
@@ -190,12 +194,10 @@
                             </a>
                         </figcaption>
                     </figure>
-
                     <h3>Roosevelt Island Tramway</h3>
                 </div>
 
             </div>
-
         </section>
 
     </main>
